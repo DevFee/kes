@@ -1,8 +1,6 @@
-import { Bot, Context, InlineKeyboard, CommandContext } from "grammy";
+import { Context } from "grammy";
 import { PrismaClient } from "@prisma/client";
 import { mainMenuKeyboard } from "../templates/mainMenuTemplate";
-import { itemsKeyboard } from "../templates/itemskeyboards";
-import { backOption } from "../templates/backOptionTemplate";
 
 const prisma = new PrismaClient();
 

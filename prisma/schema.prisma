@@ -13,13 +13,19 @@ model User {
   username String?
   userId   String  @unique
   credit   Int
-  sales    Sales[] @relation("UserSales")
 }
 
-model Sales {
+model Sites {
   id        String @id @default(uuid())
-  userId    String
-  productId String
-  quantity  Int
-  user      User   @relation("UserSales", fields: [userId], references: [id])
+  name      String
+  price     Float
+  desc      String
+  visualize String
+}
+
+model Bots {
+  id    String @id @default(uuid())
+  name  String
+  price Float
+  desc  String
 }
